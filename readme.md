@@ -8,7 +8,7 @@ Dans un jeu de rôle, l'inventaire permet d'équiper des objets (ici, des armure
 Une fois les objets équipés, leurs bonus (exprimés par une valeur numérique) se cumulent et donnent pour chaque caractéristique un bonus total. 
 
 
-Tu trouveras le travail déjà entamé dans le package `com.wcs.java.checkpoint.inventory`. Tu dois le terminer !
+Tu trouveras le travail déjà entamé dans ce repository. Tu dois le terminer !
 
 - Commence par lire, compiler et executer la classe `Main` pour comprendre ce qu'elle fait.
 - Tu as sans doute remarqué que notre héros est à ce stade peu équipé. Il serait bon de lui donner une armure et des anneaux.
