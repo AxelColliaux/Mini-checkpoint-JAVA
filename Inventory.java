@@ -38,7 +38,7 @@ public class Inventory {
         System.out.println("*** equipped items ***");
         displayEquippedItem("left ring", leftRing);
         displayEquippedItem("right ring", rightRing);
-        displayEquippedItem("left ring", armor);
+        displayEquippedItem("armor", armor);
         displayEquippedItem("boots", boots);
     }
     private void displayEquippedItem(String label, Item item) {
@@ -49,11 +49,53 @@ public class Inventory {
         }
     }
 
+    // TODO Code à factoriser
+    private void overallBonus(Item armor, Item boots, Item leftRing, Item rightRing){
+
+        int intelligenceTotal = 0;
+        int agilityTotal = 0;
+        int strengthTotal = 0;
+        int resistanceTotal = 0;
+
+        if (armor != null) {
+            intelligenceTotal += armor.getIntelligenceBonus();
+            agilityTotal += armor.getAgilityBonus();
+            strengthTotal += armor.getStrengthBonus();
+            resistanceTotal += armor.getResistanceBonus();
+        }
+
+        if (boots != null) {
+            intelligenceTotal += boots.getIntelligenceBonus();
+            agilityTotal += boots.getAgilityBonus();
+            strengthTotal += boots.getStrengthBonus();
+            resistanceTotal += boots.getResistanceBonus();
+        }
+
+        if (leftRing != null) {
+            intelligenceTotal += leftRing.getIntelligenceBonus();
+            agilityTotal += leftRing.getAgilityBonus();
+            strengthTotal += leftRing.getStrengthBonus();
+            resistanceTotal += leftRing.getResistanceBonus();
+        }
+
+        if (rightRing != null) {
+            intelligenceTotal += rightRing.getIntelligenceBonus();
+            agilityTotal += rightRing.getAgilityBonus();
+            strengthTotal += rightRing.getStrengthBonus();
+            resistanceTotal += rightRing.getResistanceBonus();
+        }
+
+        System.out.println("Intelligence : "+ intelligenceTotal);
+        System.out.println("Agility : "+ agilityTotal);
+        System.out.println("Strength : "+ strengthTotal);
+        System.out.println("Resistance : "+ resistanceTotal);
+    }
+
+
     public void displayOverallBonus() {
         System.out.println("");
         System.out.println("*** overall bonus ***");
-        // TODO - replace me with better code...
-        System.out.println("TODO!");
+        overallBonus(armor, boots, leftRing, rightRing);
     }
 
 }
